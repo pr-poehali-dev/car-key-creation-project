@@ -97,15 +97,15 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
-      <header className="border-b border-border/40 backdrop-blur-sm bg-background/80 sticky top-0 z-50">
+    <div className="min-h-screen bg-white">
+      <header className="border-b border-border bg-white sticky top-0 z-50 shadow-sm">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 animate-fade-in">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center animate-glow">
+              <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
                 <Icon name="Key" className="text-white" size={24} />
               </div>
-              <span className="text-2xl font-heading font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-2xl font-heading font-bold text-gray-800">
                 KeyMaster
               </span>
             </div>
@@ -148,7 +148,7 @@ const Index = () => {
               >
                 <Icon name="User" size={20} />
               </Button>
-              <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm">
                 Консультация
               </Button>
             </div>
@@ -158,27 +158,22 @@ const Index = () => {
 
       {activeSection === 'catalog' && (
         <>
-          <section className="relative py-20 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
-            <div className="container mx-auto px-4 relative z-10">
-              <div className="max-w-4xl mx-auto text-center animate-slide-up">
-                <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-                  Профессиональное изготовление
-                </Badge>
-                <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                  Автомобильные ключи для любой модели
+          <section className="bg-gray-50 py-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <h1 className="text-4xl md:text-5xl font-heading font-medium mb-4 text-gray-800">
+                  Изготовление автомобильных ключей
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Широкий каталог смарт-ключей и чипов для всех марок автомобилей. Быстрое изготовление, профессиональное программирование.
+                <p className="text-lg text-gray-600 mb-8">
+                  Профессиональное изготовление и программирование ключей с чипом для всех марок автомобилей
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity text-lg">
-                    <Icon name="Search" className="mr-2" size={20} />
-                    Найти ключ
-                  </Button>
-                  <Button size="lg" variant="outline" className="text-lg border-2 hover:bg-accent/50">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm">
                     <Icon name="Phone" className="mr-2" size={20} />
-                    Позвонить
+                    +7 (495) 123-45-67
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-sm">
+                    Заказать звонок
                   </Button>
                 </div>
               </div>
@@ -187,49 +182,49 @@ const Index = () => {
 
           <section className="py-16">
             <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all hover:scale-105 animate-fade-in">
-                  <CardContent className="pt-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
-                      <Icon name="Zap" className="text-white" size={24} />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                <Card className="border border-gray-200 bg-white hover:shadow-md transition-shadow">
+                  <CardContent className="pt-6 text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Clock" className="text-primary" size={28} />
                     </div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Быстро</h3>
-                    <p className="text-muted-foreground">Изготовление ключа за 30-60 минут</p>
+                    <h3 className="text-lg font-medium mb-2 text-gray-800">Быстрое изготовление</h3>
+                    <p className="text-gray-600 text-sm">От 30 минут до 2 часов</p>
                   </CardContent>
                 </Card>
-                <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all hover:scale-105 animate-fade-in" style={{animationDelay: '0.1s'}}>
-                  <CardContent className="pt-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
-                      <Icon name="Shield" className="text-white" size={24} />
+                <Card className="border border-gray-200 bg-white hover:shadow-md transition-shadow">
+                  <CardContent className="pt-6 text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Shield" className="text-primary" size={28} />
                     </div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Надежно</h3>
-                    <p className="text-muted-foreground">Оригинальные чипы и гарантия качества</p>
+                    <h3 className="text-lg font-medium mb-2 text-gray-800">Гарантия качества</h3>
+                    <p className="text-gray-600 text-sm">Оригинальные чипы и комплектующие</p>
                   </CardContent>
                 </Card>
-                <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all hover:scale-105 animate-fade-in" style={{animationDelay: '0.2s'}}>
-                  <CardContent className="pt-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
-                      <Icon name="Award" className="text-white" size={24} />
+                <Card className="border border-gray-200 bg-white hover:shadow-md transition-shadow">
+                  <CardContent className="pt-6 text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="MapPin" className="text-primary" size={28} />
                     </div>
-                    <h3 className="text-xl font-heading font-semibold mb-2">Качественно</h3>
-                    <p className="text-muted-foreground">Профессиональное оборудование</p>
+                    <h3 className="text-lg font-medium mb-2 text-gray-800">Выезд на место</h3>
+                    <p className="text-gray-600 text-sm">Работаем по всей Москве</p>
                   </CardContent>
                 </Card>
               </div>
 
               <div className="mb-8">
-                <h2 className="text-3xl font-heading font-bold mb-6">Каталог автомобильных ключей</h2>
-                <div className="flex flex-col md:flex-row gap-4">
+                <h2 className="text-2xl font-heading font-medium mb-6 text-gray-800">Каталог автомобильных ключей</h2>
+                <div className="flex flex-col md:flex-row gap-3">
                   <div className="flex-1">
                     <Input
                       placeholder="Поиск по марке или модели..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="bg-background/50 border-border/50"
+                      className="border-gray-300 rounded-sm"
                     />
                   </div>
                   <Select value={selectedBrand} onValueChange={setSelectedBrand}>
-                    <SelectTrigger className="w-full md:w-[200px] bg-background/50 border-border/50">
+                    <SelectTrigger className="w-full md:w-[200px] border-gray-300 rounded-sm">
                       <SelectValue placeholder="Марка" />
                     </SelectTrigger>
                     <SelectContent>
@@ -242,44 +237,42 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredKeys.map((key, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {filteredKeys.map((key) => (
                   <Card 
                     key={key.id} 
-                    className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                    style={{animationDelay: `${index * 0.1}s`}}
+                    className="group overflow-hidden border border-gray-200 bg-white hover:shadow-lg transition-all"
                   >
-                    <div className="aspect-video overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
+                    <div className="aspect-square overflow-hidden bg-gray-50">
                       <img 
                         src={key.image} 
                         alt={`${key.brand} ${key.model}`}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <CardHeader>
-                      <div className="flex items-start justify-between mb-2">
-                        <Badge className="bg-secondary/10 text-secondary border-secondary/20">
+                    <CardHeader className="p-4">
+                      <CardTitle className="text-base font-medium text-gray-800 mb-1">{key.brand} {key.model}</CardTitle>
+                      <CardDescription className="text-sm text-gray-500">{key.year}</CardDescription>
+                      <div className="mt-3">
+                        <div className="text-2xl font-bold text-primary mb-1">
+                          {key.price.toLocaleString()} ₽
+                        </div>
+                        <Badge variant="secondary" className="text-xs">
                           {key.type}
                         </Badge>
-                        <span className="text-2xl font-heading font-bold text-primary">
-                          {key.price.toLocaleString()} ₽
-                        </span>
                       </div>
-                      <CardTitle className="text-xl font-heading">{key.brand} {key.model}</CardTitle>
-                      <CardDescription>{key.year}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <div className="space-y-2 mb-4">
-                        {key.features.map((feature, i) => (
-                          <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Icon name="Check" size={16} className="text-primary" />
-                            {feature}
+                    <CardContent className="p-4 pt-0">
+                      <div className="space-y-1 mb-4">
+                        {key.features.slice(0, 3).map((feature, i) => (
+                          <div key={i} className="flex items-center gap-2 text-xs text-gray-600">
+                            <Icon name="Check" size={14} className="text-primary flex-shrink-0" />
+                            <span className="line-clamp-1">{feature}</span>
                           </div>
                         ))}
                       </div>
-                      <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                        <Icon name="ShoppingCart" className="mr-2" size={18} />
-                        Заказать
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm text-sm">
+                        Подробнее
                       </Button>
                     </CardContent>
                   </Card>
@@ -435,48 +428,57 @@ const Index = () => {
         </section>
       )}
 
-      <footer className="border-t border-border/40 bg-card/30 backdrop-blur-sm mt-20">
-        <div className="container mx-auto px-4 py-12">
+      <footer className="border-t border-gray-200 bg-gray-50 mt-16">
+        <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
                   <Icon name="Key" className="text-white" size={18} />
                 </div>
-                <span className="text-xl font-heading font-bold">KeyMaster</span>
+                <span className="text-lg font-heading font-medium text-gray-800">KeyMaster</span>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-600">
                 Профессиональное изготовление автомобильных ключей
               </p>
             </div>
             <div>
-              <h3 className="font-heading font-semibold mb-4">Каталог</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Mercedes-Benz</li>
-                <li>BMW</li>
-                <li>Audi</li>
-                <li>Toyota</li>
+              <h3 className="font-medium mb-3 text-gray-800">Каталог</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="hover:text-primary cursor-pointer">Mercedes-Benz</li>
+                <li className="hover:text-primary cursor-pointer">BMW</li>
+                <li className="hover:text-primary cursor-pointer">Audi</li>
+                <li className="hover:text-primary cursor-pointer">Toyota</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-heading font-semibold mb-4">Компания</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>О нас</li>
-                <li>Блог</li>
-                <li>Контакты</li>
-                <li>Вакансии</li>
+              <h3 className="font-medium mb-3 text-gray-800">Информация</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="hover:text-primary cursor-pointer">О компании</li>
+                <li className="hover:text-primary cursor-pointer">Доставка и оплата</li>
+                <li className="hover:text-primary cursor-pointer">Гарантии</li>
+                <li className="hover:text-primary cursor-pointer">Контакты</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-heading font-semibold mb-4">Контакты</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>+7 (495) 123-45-67</li>
-                <li>info@keymaster.ru</li>
-                <li>г. Москва</li>
+              <h3 className="font-medium mb-3 text-gray-800">Контакты</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <Icon name="Phone" size={14} className="text-primary" />
+                  +7 (495) 123-45-67
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Mail" size={14} className="text-primary" />
+                  info@keymaster.ru
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="MapPin" size={14} className="text-primary" />
+                  г. Москва
+                </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border/40 mt-8 pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-gray-200 mt-8 pt-6 text-center text-sm text-gray-500">
             <p>&copy; 2024 KeyMaster. Все права защищены.</p>
           </div>
         </div>
