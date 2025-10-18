@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -81,6 +82,7 @@ const carKeys: CarKey[] = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
   const [selectedBrand, setSelectedBrand] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeSection, setActiveSection] = useState<string>('catalog');
@@ -139,7 +141,11 @@ const Index = () => {
               <Button variant="ghost" size="icon" className="hidden md:flex">
                 <Icon name="Search" size={20} />
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={() => navigate('/profile')}
+              >
                 <Icon name="User" size={20} />
               </Button>
               <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
